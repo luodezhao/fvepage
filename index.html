@@ -138,19 +138,20 @@ according to the assumption that different objects usually occupy distinct while
 </section>
 <!-- End paper abstract -->
 
-  <!-- Demo video-->
-<div class="container is-max-desktop" style="width: 150%;">
+  <!-- Image carousel -->
+<section class="hero is-small">
   <div class="hero-body">
-    <video width="100%" autoplay controls muted loop>
-      <!-- Your video here -->
-      <source src="demo_show.mp4" type="video/mp4">
-    </video>
-    <h2 class="subtitle has-text-centered">
-        Demo of our proposed GenSAM. 
-      </h2>
+    <div class="container">
+        <h2 class="title is-2 has-text-centered">Our Framework</h2>
+        <!-- Your image here -->
+        <img src="static/images/fig2_v2.png" alt="MY ALT TEXT" class="centered-image">
+        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
+          <br>The framework of <strong>InvSeg</strong>. Our proposed Contrastive Soft Clustering method can achieve region-level prompt inversion. The text tokens are first initialized with the pretrained text encoder from the diffusion model (dashed box on left) and then are used as the only learnable parameters during the test time training. After the adaption process, the learned text tokens can be used to derive a more accurate and complete refined attention maps $\{M\}$ for segmentation.
   </div>
 </div>
-<!-- End demo video -->
+</div>
+</section>
+<!-- End image carousel -->
 
   <!-- Demo video-->
 <div class="container is-max-desktop" style="width: 150%;">
