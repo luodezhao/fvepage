@@ -158,7 +158,7 @@ according to the assumption that different objects usually occupy distinct while
         <h2 class="title is-2 has-text-centered">Comparison with SOTA</h2>
         <img src="experiment_invseg.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
         <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
-          <br><strong>Comparison with existing methods</strong>. Models in the first three rows are finetuned on target datasets while the rest approaches do not require mask annotations. <strong>Bold fonts</strong>strong> refer to the best results among the models and \_underline fonts\_ refer to the second best.
+          <br><strong>Comparison with existing methods</strong>. Models in the first three rows are finetuned on target datasets while the rest approaches do not require mask annotations. <strong>Bold fonts</strong> refer to the best results among the models and <u>underline fonts<u> refer to the second best.
     </div>
   </div>
 </div>
@@ -173,7 +173,7 @@ according to the assumption that different objects usually occupy distinct while
         <img src="example_vis.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
         <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
           <br>Examples of Segmentation on VOC (top), Context (middle) and COCO (bottom). For each sample (image group of four), from left to right is input, GT, InvSeg, Diffusion baseline.
-        <img src="attention" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
+        <img src="attention.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
         <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
           <br>Visualization of refined cross-attention maps derived from text prompts before (top) and after (bottom) prompt inversion. Before prompt inversion, the segmentation of background elements such as "grass" or "trees" is influenced by foreground objects like "cow" or "horse", resulting in mistakenly ignoring background classes or  segmenting foreground (and background) classes. After applying prompt inversion, this phenomenon is suppressed by improving the distinction between foreground and background through proposed Contrastive Soft Clustering.
     </div>
