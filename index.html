@@ -158,86 +158,29 @@ according to the assumption that different objects usually occupy distinct while
         <h2 class="title is-2 has-text-centered">Comparison with SOTA</h2>
         <img src="experiment_invseg.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
         <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
-          <br><strong>Comparison with existing methods</strong>. Models in the first three rows are finetuned on target datasets while the rest approaches do not require mask annotations. <strong>Bold fonts<strong> refer to the best results among the models and _underline fonts_ refer to the second best.
+          <br><strong>Comparison with existing methods</strong>. Models in the first three rows are finetuned on target datasets while the rest approaches do not require mask annotations. <strong>Bold fonts</strong>strong> refer to the best results among the models and \_underline fonts\_ refer to the second best.
     </div>
   </div>
 </div>
 <!-- End image carousel -->
 
-  
-  <!-- Demo video-->
-<div class="container is-max-desktop" style="width: 150%;">
-  <div class="hero-body">
-    <video width="100%" autoplay controls muted loop>
-      <!-- Your video here -->
-      <source src="framework.mp4" type="video/mp4">
-    </video>
-    <h2 class="subtitle has-text-centered">
-        This video shows how our framework works. 
-      </h2>
-  </div>
-</div>
-<!-- End demo video -->
   
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- Your image here -->
-          <div style="display: flex; justify-content: center; align-items: center;">
-          <img src="static/images/AIG_framework_v3.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Framework of our GenSAM
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/supp_cod.png" alt="MY ALT TEXT" style="width: 780px; height: auto; margin-top: -15px;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Example images on COD tasks
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/supp_other.png" alt="MY ALT TEXT" style="width: 800px; height: auto;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Example images on COD tasks
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="static/images/result1.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 60px;"/>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Experiment Results.
-          </h2>
-        </div>
-      </div>
+    <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <h2 class="title is-2 has-text-centered">Visulization</h2>
+        <img src="example_vis.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
+        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
+          <br>Examples of Segmentation on VOC (top), Context (middle) and COCO (bottom). For each sample (image group of four), from left to right is input, GT, InvSeg, Diffusion baseline.
+        <img src="attention" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
+        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
+          <br>Visualization of refined cross-attention maps derived from text prompts before (top) and after (bottom) prompt inversion. Before prompt inversion, the segmentation of background elements such as "grass" or "trees" is influenced by foreground objects like "cow" or "horse", resulting in mistakenly ignoring background classes or  segmenting foreground (and background) classes. After applying prompt inversion, this phenomenon is suppressed by improving the distinction between foreground and background through proposed Contrastive Soft Clustering.
     </div>
   </div>
-</section>
+</div>
 <!-- End image carousel -->
-
-  <!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="poster_GenSAM.pdf" width="100%" height="550">
-          </iframe>      
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
+  
   
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
