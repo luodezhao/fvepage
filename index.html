@@ -144,7 +144,7 @@ according to the assumption that different objects usually occupy distinct while
     <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
         <h2 class="title is-2 has-text-centered">Our Framework</h2>
         <img src="fig2_v2.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
-        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
+        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: justify;">
           <br>The framework of <strong>InvSeg</strong>. Our proposed Contrastive Soft Clustering method can achieve region-level prompt inversion. The text tokens are first initialized with the pretrained text encoder from the diffusion model (dashed box on left) and then are used as the only learnable parameters during the test time training. After the adaption process, the learned text tokens can be used to derive a more accurate and complete refined attention maps $\{M\}$ for segmentation.
     </div>
   </div>
@@ -157,7 +157,7 @@ according to the assumption that different objects usually occupy distinct while
     <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
         <h2 class="title is-2 has-text-centered">Comparison with SOTA</h2>
         <img src="experiment_invseg.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
-        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
+        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: justify;">
           <br><strong>Comparison with existing methods</strong>. Models in the first three rows are finetuned on target datasets while the rest approaches do not require mask annotations. <strong>Bold fonts</strong> refer to the best results among the models and <u>underline fonts<u> refer to the second best.
     </div>
   </div>
@@ -169,14 +169,17 @@ according to the assumption that different objects usually occupy distinct while
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-        <h2 class="title is-2 has-text-centered">Visulization</h2>
-        <img src="example_vis.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
-        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
-          <br>Examples of Segmentation on VOC (top), Context (middle) and COCO (bottom). For each sample (image group of four), from left to right is input, GT, InvSeg, Diffusion baseline.
-        <img src="attention.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
-        <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: left;">
-          <br>Visualization of refined cross-attention maps derived from text prompts before (top) and after (bottom) prompt inversion. Before prompt inversion, the segmentation of background elements such as "grass" or "trees" is influenced by foreground objects like "cow" or "horse", resulting in mistakenly ignoring background classes or  segmenting foreground (and background) classes. After applying prompt inversion, this phenomenon is suppressed by improving the distinction between foreground and background through proposed Contrastive Soft Clustering.
-    </div>
+    <h2 class="title is-2 has-text-centered">Visualization</h2>
+    <img src="example_vis.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
+    <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: justify;">
+        Examples of Segmentation on VOC (top), Context (middle) and COCO (bottom). For each sample (image group of four), from left to right is input, GT, InvSeg, Diffusion baseline.
+    </h2>
+    <img src="attention.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
+    <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: justify;">
+        Visualization of refined cross-attention maps derived from text prompts before (top) and after (bottom) prompt inversion. Before prompt inversion, the segmentation of background elements such as "grass" or "trees" is influenced by foreground objects like "cow" or "horse", resulting in mistakenly ignoring background classes or segmenting foreground (and background) classes. After applying prompt inversion, this phenomenon is suppressed by improving the distinction between foreground and background through proposed Contrastive Soft Clustering.
+    </h2>
+</div>
+
   </div>
 </div>
 <!-- End image carousel -->
