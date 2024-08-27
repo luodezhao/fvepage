@@ -52,23 +52,22 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Relax Image-Specific Prompt Requirement in SAM: A Single Generic Prompt for Segmenting Camouflaged Objects</h1>
+            <h1 class="title is-1 publication-title">InvSeg: Test-Time  Prompt Inversion for Semantic Segmentation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://lwpyh.github.io/" target="_blank">Jian Hu</a><sup>*</sup>,</span>
+                <a href="https://jylin8100.github.io/" target="_blank">Jiayi Lin</a>,</span>
+                  <span class="author-block">
+                    <a href="https://raymond-sci.github.io/" target="_blank">Jiabo Huang</a>,</span>
+                  <span class="author-block">
+                <a href="https://lwpyh.github.io/" target="_blank">Jian Hu</a>,</span>
                 <span class="author-block">
-                  <a href="https://jylin8100.github.io/" target="_blank">Jiayi Lin</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://lvgd.github.io/" target="_blank">Weitong Cai</a>,</span>
-                  <span class="author-block">
                     <a href="http://www.eecs.qmul.ac.uk/~sgg/" target="_blank">Shaogang Gong</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Queen Mary University of London<br>AAAI 2024</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+                    <span class="author-block">Queen Mary University of London</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -127,8 +126,10 @@
             }
           </style>
           <p>
-            Camouflaged object detection (COD) approaches heavily rely on pixel-level annotated datasets. Weakly-supervised COD (WSCOD) approaches use sparse annotations like scribbles or points to reduce annotation effort, but this can lead to decreased accuracy. 
-            The Segment Anything Model (SAM) shows remarkable segmentation ability with sparse prompts like points. However, manual prompt is not always feasible, as it may not be accessible in real-world application. Additionally, it only provides localization information instead of semantic one, which can intrinsically cause ambiguity in interpreting the targets. In this work, we aim to eliminate the need for manual prompt. The key idea is to employ Cross-modal Chains of Thought Prompting (CCTP) to reason visual prompts using the semantic information given by a generic text prompt. To that end, we introduce a test-time adaptation per-instance mechanism called Generalizable SAM (GenSAM) to automatically generate and optimize visual prompts the generic task prompt for WSCOD. In particular, CCTP maps a single generic text prompt onto image-specific consensus foreground and background heatmaps using vision-language models, acquiring reliable visual prompts. Moreover, to test-time adapt the visual prompts, we further propose Progressive Mask Generation (PMG) to iteratively reweight the input image, guiding the model to focus on the targets in a coarse-to-fine manner. Crucially, all network parameters are fixed, avoiding the need for additional training. Experiments demonstrate the superiority of GenSAM. Experiments on three benchmarks demonstrate that GenSAM outperforms point supervision approaches and achieves comparable results to scribble supervision ones, solely relying on general task descriptions as prompts.
+            The precise visual-textual correlations embedded in the attention maps derived from text-to-image generative diffusion models have been shown beneficial to open-vocabulary dense visual prediction tasks,e.g., semantic segmentation.
+          However, a significant challenge arises due to the distributional discrepancy between the context-rich sentences used for image generation training and the isolated class names typically available for visual discrimination. This discrepancy in the richness of textual context limits the effectiveness of diffusion models in capturing accurate visual-textual correlations.
+            To tackle this challenge, we propose a novel approach called InvSeg, a test-time prompt inversion method that leverages per-image visual context to optimize the context-insufficient text prompts composed of isolated class names, so as to associate every pixel and class for open-vocabulary semantic segmentation. Specifically, we introduces a Contrastive Soft Clustering (CSC) method to derive the underlying structure of images
+according to the assumption that different objects usually occupy distinct while continuous areas within visual scenes. Such structural information is then used to constrain the image-text cross-attention for calibrating the input class embeddings without requiring any manual label or additional training data. By incorporating sample-specific context at test time, InvSeg learns context-rich text prompts in embedding space to achieve accurate semantic alignment across modalities. Experiments show that InvSeg achieves state-of-the-art performance on the PASCAL VOC and Context datasets. 
           </p>
         </div>
       </div>
