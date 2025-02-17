@@ -148,11 +148,34 @@
             }
           </style>
           <p>
-            The precise visual-textual correlations embedded in the attention maps derived from text-to-image generative diffusion models have been shown beneficial to open-vocabulary dense visual prediction tasks,e.g., semantic segmentation.
-          However, a significant challenge arises due to the distributional discrepancy between the context-rich sentences used for image generation training and the isolated class names typically available for visual discrimination. This discrepancy in the richness of textual context limits the effectiveness of diffusion models in capturing accurate visual-textual correlations.
-            To tackle this challenge, we propose a novel approach called InvSeg, a test-time prompt inversion method that leverages per-image visual context to optimize the context-insufficient text prompts composed of isolated class names, so as to associate every pixel and class for open-vocabulary semantic segmentation. Specifically, we introduces a Contrastive Soft Clustering (CSC) method to derive the underlying structure of images
-according to the assumption that different objects usually occupy distinct while continuous areas within visual scenes. Such structural information is then used to constrain the image-text cross-attention for calibrating the input class embeddings without requiring any manual label or additional training data. By incorporating sample-specific context at test time, InvSeg learns context-rich text prompts in embedding space to achieve accurate semantic alignment across modalities. Experiments show that InvSeg achieves state-of-the-art performance on the PASCAL VOC and Context datasets. 
-          </p>
+         Video moment retrieval (VMR) aims to locate the most likely video moment(s) corresponding to a text query in untrimmed videos. Training of existing methods is limited by
+  the lack of diverse and generalisable VMR datasets, hindering
+their ability to generalise moment-text associations to
+queries containing novel semantic concepts (unseen both visually
+  and textually in a training source domain). For model generalisation to novel semantics, existing methods rely heavily on assuming to have access to both video and text sentence pairs from a
+  target domain in addition to the source domain pair-wise training data. This is neither practical nor scalable.
+In this work, we introduce a more generalisable approach by
+  assuming  only text sentences describing new semantics are available in model training without having seen any videos from a target domain. To that end, we propose a Fine-grained Video Editing framework, termed 
+  FVE, that explores generative video
+diffusion to facilitate fine-grained video editing from the seen
+  source concepts to the unseen target sentences consisting of new
+  concepts. This enables generative hypotheses of unseen video
+  moments corresponding to the novel concepts in the target
+  domain. This fine-grained generative video diffusion  
+retains the original video structure and subject specifics from the
+source domain while introducing semantic distinctions of unseen
+novel vocabularies in the target domain. A critical challenge
+  is how to enable this generative fine-grained diffusion process to
+  be meaningful in optimising VMR, more than just synthesising
+  visually pleasing videos. We solve this problem by introducing a
+  hybrid selection mechanism that integrates three quantitative
+  metrics to selectively incorporate synthetic video 
+moments (novel video hypotheses) as enlarged additions to the
+  original source training data, whilst minimising potential
+detrimental noise or unnecessary repetitions in the novel synthetic
+videos harmful to VMR learning. Experiments on three datasets
+demonstrate the effectiveness of FVE to unseen novel semantic
+video moment retrieval tasks.          </p>
         </div>
       </div>
     </div>
