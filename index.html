@@ -205,14 +205,11 @@ video moment retrieval tasks.          </p>
   <div class="hero-body">
     <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
     <h2 class="title is-2 has-text-centered">Visualization</h2>
-    <img src="example_vis.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
+    <img src="visual.jpg" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
     <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: justify;">
-        Examples of Segmentation on VOC (top), Context (middle) and COCO (bottom). For each sample (image group of four), from left to right is input, GT, InvSeg, Diffusion baseline.
+        Examples of Video Editing. 
     </h2>
-    <img src="attention.png" alt="MY ALT TEXT" style="width: 1000px; height: auto; margin-top: 30px; display: block;">
-    <h2 class="subtitle" style="max-width: 75%; margin: 0 auto; text-align: justify;">
-        Visualization of refined cross-attention maps derived from text prompts before (top) and after (bottom) prompt inversion. Before prompt inversion, the segmentation of background elements such as "grass" or "trees" is influenced by foreground objects like "cow" or "horse", resulting in mistakenly ignoring background classes or segmenting foreground (and background) classes. After applying prompt inversion, this phenomenon is suppressed by improving the distinction between foreground and background through proposed Contrastive Soft Clustering.
-    </h2>
+   
 </div>
 
   </div>
@@ -224,14 +221,12 @@ video moment retrieval tasks.          </p>
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{lin2024invsegtesttimepromptinversion,
-      title={InvSeg: Test-Time Prompt Inversion for Semantic Segmentation}, 
-      author={Jiayi Lin and Jiabo Huang and Jian Hu and Shaogang Gong},
-      year={2024},
-      eprint={2410.11473},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2410.11473}, 
+      <pre><code>@article{luo2024generative,
+  title={Generative Video Diffusion for Unseen Cross-Domain Video Moment Retrieval},
+  author={Luo, Dezhao and Gong, Shaogang and Huang, Jiabo and Jin, Hailin and Liu, Yang},
+  journal={arXiv preprint arXiv:2401.13329},
+  year={2024}
+}
 }</code></pre>
     </div>
 </section>
